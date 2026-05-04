@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Demandas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Gestão de Demandas</h1>
+
+  <div class="container">
+    <section>
+      <h2>Cadastrar Nova Demanda</h2>
+      <form id="formDemanda">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required placeholder="Título da demanda">
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" required placeholder="Detalhes da solicitação"></textarea>
+
+        <label for="responsavel">Responsável:</label>
+        <input type="text" id="responsavel" required placeholder="Nome do técnico">
+
+        <label for="status">Status:</label>
+        <select id="status">
+          <option value="Em aberto">Em aberto</option>
+          <option value="Em andamento">Em andamento</option>
+          <option value="Concluído">Concluído</option>
+        </select>
+
+        <label for="data">Data de abertura:</label>
+        <input type="date" id="data" required>
+
+        <div class="form-actions">
+          <button type="submit">Cadastrar</button>
+          <button type="button" id="btnLimpar" class="btn-link">Limpar campos</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Demandas Cadastradas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaDemandas">
+          </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
